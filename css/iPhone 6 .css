@@ -249,8 +249,6 @@ nav .manu ul li:hover .box-2223{
 }
 /* main */
 main .box-1{
-    text-align: center;
-    padding-top: 40px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -292,7 +290,7 @@ main .box-1 .title{
 
 main .box-1 .img {
     position: absolute;
-    bottom: -90px;
+    top: 110px;
     left: 50%;
     transform: translateX(-50%);
 }
