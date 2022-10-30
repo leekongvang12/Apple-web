@@ -1,5 +1,8 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;600;700;900&family=Noto+Serif+Lao:wght@200&family=Oswald:wght@200;300&display=swap');
+
 *{
-    font-family: Saysettha OT;
+    font-family: 'Noto Sans Lao', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing:border-box;
@@ -111,6 +114,7 @@ nav .bars{
 /* ul li don down */
 nav .manu ul li .box{
     display: none;
+    padding: 10px 20px;
 }
 .bjo{
     position: relative;
@@ -135,6 +139,10 @@ nav .manu ul li .x-box-22 a,nav .manu ul li:hover .box a{
     display:block;
     width: 200px;
     margin-top: 10px;
+}
+nav .manu ul li .box a:hover{
+    transform: scale(1.2,1.5);
+    transition: all 1s ease;
 }
 nav .manu ul li .x-box-22 .a-1 a,nav .manu ul li:hover .box .a-1 a{
     text-align: left;
@@ -179,6 +187,7 @@ nav .manu ul li .box-2223 a,nav .manu ul li:hover .box-2223 a{
     margin-top: 10px;
 }
 nav .manu ul li .img{
+    position: absolute;
     text-align: center;
     position: fixed;
     display: block;
@@ -192,7 +201,7 @@ nav .manu ul li:hover .box-2223{
 /* mousey */
 .scroll-downs{
     position: absolute;
-    top: 500px;
+    top: 80px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -204,7 +213,7 @@ nav .manu ul li:hover .box-2223{
     width: 3px;
     padding: 10px 15px;
     height: 35px;
-    border: 2px solid #fff;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 25px;
     opacity: 0.75;
     box-sizing: content-box;
@@ -213,10 +222,10 @@ nav .manu ul li:hover .box-2223{
     width: 3px;
     height: 10px;
     border-radius: 25%;
-    background-color:#ffffff;
+    background-color:#000000;
     
     animation-name: scroll;
-    animation-duration: 2.2s;
+    animation-duration: 3s;
     animation-timing-function: cubic-bezier(.15,.41,.69,94);
     animation-iteration-count: infinite;
 }
@@ -240,215 +249,290 @@ nav .manu ul li:hover .box-2223{
 }
 /* main */
 main .box-1{
-    padding-top: 100px;
     text-align: center;
-    padding-right: 50px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
 }
 main .box-1 .title{
-    background-color: #D9D9D9;
     font-size: 2.2em;
     font-weight: bold;
-    display: inline-block;
-    padding:5px 80px;
-    border-radius: 30px;
-    margin-bottom: 20px;
-    margin-left: 150px;
+    position: absolute;
+    background: linear-gradient(123deg, rgb(0, 0, 0), rgb(249, 0, 212) ,rgb(119, 0, 255));
+    width: 100%;
+    top: 20px;
+    color: white;
+    transform: skew(10deg, 5deg);
+    box-shadow: 5px 5px 50px 5px rgb(2, 231, 252);
+    animation: titlesali 2s;
+    border-radius: 10px;
+    border: none;
+    z-index: 1;
 }
+@keyframes titlesali {
+    0% {
+        left: -500px;
+        height: 5px;
+        font-size: 1px;
+        transform: skew(0deg, 0deg);
+    }
+    85% {
+        left: 10px;
+        height: 5px;
+        font-size: 1px;
+        transform: skew(0deg, 0deg);
+    }100% {
+        left: 0px;
+    }
+
+}
+
 main .box-1 .img {
-    padding-left: 150px;
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-main .box-1 .ba-img img{
-    max-width: 100px;
-    margin: 0 auto;
+main .box-1 .img .btn-img-1, main .box-1 .img .btn-img-2 {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bolder;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 5px 20px;
+    position: absolute;
+    top: 50%;
+    border: 1px solid rgb(255, 0, 204);
+    color: #c625d0;
+    cursor: pointer;
 }
-main .box-1 .ba-img{
-    margin-left: 120px;
+main .box-1 .img .btn-img-1 {
+    left: -70px;
+    animation: btn-img-1 2s infinite;
 }
+main .box-1 .img .btn-img-1:hover{
+    background: red;
+    color: #fff;
+    transition: all 1s ease;
+    animation: none;
+}
+main .box-1 .img .btn-img-2:hover{
+    background: green;
+    color: #fff;
+    transition: all 1s ease;
+    animation: none;
+}
+@keyframes btn-img-1 {
+    0% {
+       left: -50px; 
+    } 50% {
+       left: -70px;
+    }100% {
+        left: -50px;
+    }
+}
+main .box-1 .img .btn-img-2 {
+    right: -70px;
+    animation: btn-img-2 2s infinite;
+}
+@keyframes btn-img-2 {
+    0% {
+        right: -50px;
+    }50% {
+        right: -70px;
+    }100% {
+        right: -50px
+    }
+}
+
+main .box-1 .img img {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    position: relative;
+}
+main .box-1 .img .imgsliter-right {
+    animation: img-sqli-right 0.80s;
+}
+@keyframes img-sqli-right {
+    0% {
+        right: -100px;
+        opacity: 0;
+    } 100% {
+        right: 0;
+    }
+}
+main .box-1 .img .imgsliter-left {
+    animation: img-sqli-left 0.80s;
+}
+@keyframes img-sqli-left {
+    0% {
+        left: -100px;
+        opacity: 0;
+    } 100% {
+        left: 0;
+    }
+}
+main .box-1 .text-ba {
+    position: relative;
+    top: 300px;
+    color:rgb(249, 0, 212);
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
 main .contnet{
-    display: flex;
-    justify-content:space-between;
-}
-main .box-2{
-    padding-right: 150px;
-    padding-left: 150px;
-    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 100px;
+    padding: 50px;
 }
 main .box-2 .apple{
     text-align: center;
     margin-bottom: 50px;
+    font-size: 80px;
+}
+main .box-2 .apple .fa-apple{
+    animation: fontapple 4s infinite;
+}
+@keyframes fontapple {
+    0% {
+        text-shadow: rgb(255, 0, 191) 15px 15px 40px;
+    }50% {
+        text-shadow: rgb(255, 0, 191) -15px -15px 40px;
+    }100% {
+        text-shadow: rgb(255, 0, 191) 15px 15px 40px;
+    }
 }
 
 
 main .box-2 .us{
-    display:flex;
-    justify-content: center;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 main .box-2 .us .title-1{
-    max-width: 200px;
     border-bottom:2px solid #060606;
     border-right:2px solid #060606;
     padding: 0 10px;
-}
-main .box-2 .us .title-2 p{
     text-align: center;
 }
-main .box-2 .us .title-1 p{
-    text-align: center;
-}
-main .box-2 .us .title-3 p{
-    text-align: center;
+main .box-2 .us .title-1 .fa-mobile-screen-button {
+    font-size: 40px;
 }
 main .box-2 .us .title-2{
+    text-align: center;
+    padding: 0 10px;
+    font-size: 1.2em;
     border-bottom:2px solid #060606;
     border-right:2px solid #060606;
-    width: 200px;
+}
+main .box-2 .us .title-2 .bi-camera{
+    font-size: 40px;
 }
 main .box-2 .us .title-3{
     border-bottom:2px solid #060606;
-    max-width: 200px;
-    padding: 0 30px;
+    padding: 0 10px;
+    text-align: center;
 }
-main .box-2 .us img{
-    max-width: 100px;
+main .box-2 .us .title-3 .fa-microchip{
+    font-size: 40px;
 }
 
 main .box-2 .uv{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
 }
 main .box-2 .uv .title-4{
-    width: 200px;
     border-right:2px solid #060606;
-    padding: 0 50px;
-}
-main .box-2 .uv .title-5 p{
+    padding: 0 10px;
+    font-size: 1.2em;
     text-align: center;
 }
-main .box-2 .uv .title-4 p{
-    text-align: center;
-}
-main .box-2 .uv .title-6 p{
-    text-align: center;
+main .box-2 .uv .title-4 .fa-apple {
+    font-size: 40px;
 }
 main .box-2 .uv .title-5{
     border-right:2px solid #060606;
-    width: 200px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+main .box-2 .uv .title-5 .bi-sd-card-fill{
+    font-size: 40px;
 }
 main .box-2 .uv .title-6{
-    width: 200px;
-}
-main .box-2 .uv img{
-    max-width: 100px;
-    margin-top: 20px;
-}
-main .box-apple-1{
-    padding-top: 90px;
-}
-main .box-apple-1 .title{
-    font-size: 1.5em;
-    font-weight: bold;
-    background-color: #D9D9D9;
-    padding: 10px 50px;
-    border-radius: 30px;
+    padding: 0 10px;
     text-align: center;
-    margin: 0px 500px;
+    font-size: 0.85em;
 }
-main .box-apple-1 .img{
-    text-align: center;
-    margin-top: 30px;
-}
-main .box-apple-1 .img img {
-    width: 400px;
-}
-main .box-apple-1 .text{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding-top: 20px;
-    font-size: 1.5em;
-}
-main .box-apple-1 .text .text-2{
-    padding-left: 100px;
-}
-main .box-apple-1 .text .text-1 .jay{
-    color:blue;
-    font-weight: bolder;
-    text-shadow: 10px 2px 10px blue;
-}
-main .box-apple-1 .text .text-2 .lee{
-    color:red;
-    font-weight: bolder;
-    text-shadow: 10px 2px 10px red;
-}
-main .box-apple-2 .text{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    padding-top: 20px;
-    font-size: 1.5em;
+main .box-2 .uv .title-6 .bi-battery-charging{
+    font-size: 40px;
 }
 
-main .box-1 .text-ba{
-    padding-left: 100px;
-    font-size: 1.3em;
-    font-weight: bold;
-}
-main .apple-1{
-    margin-top: 50px;
-    display: flex;
-}
-main .apple-1 .box-apple-11{
-    width: 50%;
-    margin-right: 20px;
-}
-main .apple-1 .box-apple-22{
-    width: 50%;
-}
-main .apple-1 .box-apple-11 .title{
-    background-color: #D9D9D9;
-    padding: 5px 0px;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-}
-main .apple-1 .box-apple-11 .text{
+main .link {
+    background: #000;
+    color: white;
+    position: relative;
+    left: 50%;
+    padding: 10px 40px;
     font-size: 1.2em;
-    padding: 20px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
 }
-main .apple-1 .box-apple-22 .title{
-    background-color: #D9D9D9;
-    padding: 5px 0px;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
+main .link::after,main .link::before {
+    content: '';
+    border: 3px solid #000;
+    position: absolute;
+    border-radius: inherit;
+    background: #000;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    transition: all 0.25s ease;
+    opacity: 0.3;
 }
-main .apple-1 .box-apple-22 .text{
-    font-size: 1.2em;
-    padding: 20px 30px;
+main .link:hover {
+    transform: translate(-12px, -12px);
+}
+main .link:hover::after {
+    transform: translate(6px, 6px);
+}
+main .link:hover::before {
+    transform: translate(12px , 12px);
+}
+main .link a {
+    text-decoration: none;
+    color: white;
 }
 
-
-.box-apple-1 .link{
-    text-align: center;
+main .box-apple-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 20px;
     padding-top: 50px;
 }
-.box-apple-1 .link a{
-    text-decoration: none;
-    padding: 10px 50px;
-    border-radius:30px ;
-    font-size: 1.3em;
-    color:#FFFFFF;
-    background-image: linear-gradient(#27d86c 0%,#26caf8 50%,#c625d0 100%);
+main .box-apple-1 .title .title-p{
+    background: blueviolet;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 1.2em;
+    font-weight: bolder;
+    width: 70%;
+    position: relative;
+    margin: 0 auto;
 }
-.box-apple-1 .link a:hover{
-    transform:translate(0,-6);
-    box-shadow: 10px -10px 25px 0px rgba(143,64,248,0.5),-10px 10px 25px 0px rgba(39,200,255,0.5);
-    background-image: linear-gradient(#36ff83 0%,#29d1ff 50%,#f67fff 100%);
-    transition: all 0.50s ease;
-    color:rgb(255, 245, 52);
-    transform: translate(-12px ,-12px);
+
+main .box-apple-1 .title .text {
+    color:rgb(52, 199, 46);
+    padding: 10px 20px;
 }
 /* footer */
 
@@ -559,21 +643,7 @@ footer .aout-2 .font{
     }
     nav .manu .uo{
         display: none;
-    }
-    nav .manu .see{
-        display: block;
-        margin-top: 30px;
-        padding-top: 30px;
-        background-color: rgb(0, 0, 0);
-        position: absolute;
-        right: 0;
-        padding-right: 20px;
-        transform: skew(0deg,-10deg);
-        padding-bottom: 20px;
-        border-top-left-radius:30px ;
-        border-bottom-right-radius: 30px;
-        box-shadow: 10px -10px 25px 0px rgba(143,64,248,0.5), -10px 10px 25px 0px rgba(39,200,255,0.5);
-    }
+    } 
     nav .manu ul li{
         transform: skew(0deg,10deg);
     }
@@ -764,31 +834,6 @@ main .box-3 img{
         position: fixed;
         right: 0px;
     }
-    nav .manu ul li .x-box-22, nav .manu ul li:hover .box {
-        position: sticky;
-        display: flex;
-        justify-content: center;
-        border-radius: 30px;
-    }
-    nav .manu ul li .x-box-22 .a-1, nav .manu ul li:hover .box .a-1{
-        width: 150px;
-    }
-    nav .manu ul li .x-box-22 .a-1 a, nav .manu ul li:hover .box .a-1 a{
-        text-align: left;
-        width: 150px;
-    }
-    nav .manu ul li .x-box-22 .a-2 a, nav .manu ul li:hover .box .a-2 a{
-        text-align: left;
-        width: 150px;
-    }
-    nav .manu ul li .x-box-22 a  nav .manu ul li:hover .box a{
-        display: block;
-        font-size: 0.70em;
-        color:#ffffff;
-        text-align: center;
-        margin-top:10px;
-    }
-
     nav .manu ul li .box-2223 a{
         display:block;
         margin-top: 10px;
